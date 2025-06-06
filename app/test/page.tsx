@@ -2,7 +2,7 @@ import type { Schema } from "@/amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
 import { Amplify } from 'aws-amplify';
 import outputs from "@/amplify_outputs.json";
-import RevalidateTest from "@/components/revalidate";
+// import RevalidateTest from "@/components/revalidate";
 
 Amplify.configure(outputs);
 const client = generateClient<Schema>();
@@ -23,9 +23,9 @@ export default async function Page() {
       {/*<div>*/}
       {/*  apiresponse: {JSON.stringify(resp)}*/}
       {/*</div>*/}
-      <div>
-        <RevalidateTest />
-      </div>
+      {/*<div>*/}
+      {/*  <RevalidateTest />*/}
+      {/*</div>*/}
     </>
   )
 }
