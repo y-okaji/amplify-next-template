@@ -9,10 +9,10 @@ const client = generateClient<Schema>();
 
 export default async function Page() {
   const hoge = await client.models.Todo.list();
-  const fuga = await fetch('https://main.dekb8xv2lg4hy.amplifyapp.com/api', {
-    next: { tags: ['test-revalidate'] },
-  });
-  const resp = await fuga.json().catch(() => "");
+  // const fuga = await fetch('https://main.dekb8xv2lg4hy.amplifyapp.com/api', {
+  //   next: { tags: ['test-revalidate'] },
+  // });
+  // const resp = await fuga.json().catch(() => "");
   return (
     <>
        {hoge.data.map(v => (
@@ -20,9 +20,9 @@ export default async function Page() {
           {v.id}: {v.content}
         </div>
       ))}
-      <div>
-        apiresponse: {JSON.stringify(resp)}
-      </div>
+      {/*<div>*/}
+      {/*  apiresponse: {JSON.stringify(resp)}*/}
+      {/*</div>*/}
       <div>
         <RevalidateTest />
       </div>
