@@ -41,11 +41,15 @@ export default function App() {
       </ul>
       <div>
         🥳 App successfully hosted. Try creating a new todo.
-        <br />
+        <br/>
         <a href="https://docs.amplify.aws/nextjs/start/quickstart/nextjs-app-router-client-components/">
           Review next steps of this tutorial.
         </a>
       </div>
+      <div>
+        env test
+        {process.env.NEXT_PUBLIC_ENV_TEST}
+      </div>
     </main>
-  );
+);
 }
